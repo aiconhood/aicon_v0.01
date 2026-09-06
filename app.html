@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Launch App — AICON</title>
+<meta name="description" content="Connect a wallet to AICON. Swap routing opens on Robinhood Chain once the router contract is audited.">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo-mark">
+      <img src="assets/logo.svg" alt="AICON logo">
+      <span>AICON</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#features">Why AICON</a>
+      <a href="docs.html">Docs</a>
+      <a href="https://github.com/aiconhood" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://x.com/aicon_hood" target="_blank" rel="noopener">Twitter</a>
+    </div>
+    <div class="nav-cta">
+      <appkit-button balance="hide"></appkit-button>
+    </div>
+  </nav>
+</header>
+
+<section class="app-shell">
+  <div class="wrap app-shell-inner">
+
+    <div class="eyebrow-tag"><span class="dot"></span>Router contract not yet deployed</div>
+    <h1 class="app-title">The app is <span class="lime">almost</span> live.</h1>
+    <p class="app-lead">Wallet connection on Robinhood Chain is live below. Swap execution stays off until the router contract clears an independent audit — that's the whole point of AICON being non-custodial.</p>
+
+    <div class="app-grid">
+
+      <div class="panel connect-panel">
+        <h2>1. Connect</h2>
+        <p class="panel-sub">Connect any Robinhood Chain wallet to check you're set up. No approval or signature is requested here.</p>
+        <div id="connect-slot" class="connect-slot">
+          <appkit-button size="md"></appkit-button>
+        </div>
+        <div id="network-row" class="network-row" hidden>
+          <span class="net-label">Network</span>
+          <appkit-network-button></appkit-network-button>
+        </div>
+        <div id="wrong-network" class="callout-warn" hidden>
+          You're connected on a different network. Switch to <strong>Robinhood Chain</strong> to continue.
+        </div>
+      </div>
+
+      <div class="panel swap-panel disabled-panel">
+        <div class="panel-header-row">
+          <h2>2. Swap</h2>
+          <span class="status-pill">Coming soon</span>
+        </div>
+        <p class="panel-sub">This is what routing will look like. Fields are locked until a real router contract is deployed and audited.</p>
+
+        <div class="swap-mock">
+          <div class="swap-field">
+            <label>You pay</label>
+            <div class="swap-field-row">
+              <input type="text" placeholder="0.0" disabled>
+              <span class="token-pill">ETH</span>
+            </div>
+          </div>
+          <div class="swap-arrow" aria-hidden="true">↓</div>
+          <div class="swap-field">
+            <label>You receive</label>
+            <div class="swap-field-row">
+              <input type="text" placeholder="0.0" disabled>
+              <span class="token-pill">USDG</span>
+            </div>
+          </div>
+          <button class="btn btn-disabled" disabled>Swap routing not live yet</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="follow-row">
+      <span>Get notified when routing goes live:</span>
+      <a href="https://x.com/aicon_hood" target="_blank" rel="noopener" class="btn btn-outline">Follow @aicon_hood</a>
+      <a href="https://github.com/aiconhood" target="_blank" rel="noopener" class="btn btn-outline">Watch the repo</a>
+    </div>
+
+    <div class="hero-disclaimer app-disclaimer">
+      AICON is an independent third-party application built on Robinhood Chain. Not affiliated with, endorsed by, or sponsored by Robinhood Markets, Inc. Connecting a wallet here does not move any funds or grant any approval.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="logo-mark">
+      <img src="assets/logo.svg" alt="AICON logo" style="height:36px; width:36px;">
+      <span style="font-size:16px;">AICON</span>
+    </a>
+    <div class="footer-links">
+      <a href="docs.html">Docs</a>
+      <a href="https://github.com/aiconhood" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://x.com/aicon_hood" target="_blank" rel="noopener">Twitter</a>
+    </div>
+  </div>
+  <div class="footer-disclaimer wrap">
+    AICON is an independent third-party application built on Robinhood Chain. It is not affiliated with, endorsed by, or sponsored by Robinhood Markets, Inc. Nothing on this site is financial advice.
+  </div>
+</footer>
+
+<script type="module" src="assets/app.js"></script>
+
+</body>
+</html>
